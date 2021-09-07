@@ -1,0 +1,21 @@
+alert("Veuillez atteindre la console pour voir le résultat (F12)");
+
+console.log('Voici un tableau contenant les prénoms de mes élèves :');
+let prenoms = ['Judy','Valérie','Laure','Marwa','Assmaa','Anaïs','Caroline','Myriam','Stefania','Ylenia','Julie','Minh','Grace'];
+console.log(prenoms);
+console.log(`Elles sont donc ${prenoms.length} en classe...`);
+console.log('Nous aimerions les voir trié par ordre alphabéthique : ');
+prenoms = prenoms.sort();
+console.log(prenoms);
+console.log('Pour établir un ordre de passage pour des examens, faisons une liste des 5 premières et séparons les des autres');
+let five_first = prenoms.slice(0,5);
+let last = prenoms.slice(5);
+console.log(five_first);
+console.log(last);
+console.log('Julie veut rejoindre le premier groupe et échanger de place avec Judy');
+let judy = five_first.pop();
+let julie = last.shift();
+five_first.push(julie);
+last.unshift(judy);
+console.log(five_first);
+console.log(last);
