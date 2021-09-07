@@ -8,6 +8,27 @@
 </head>
 <body>
     <h1>Démo - 01 : Introduction javascript</h1>
+
+    <p>Dans cette démo, nous avons vu comment ajouter un script js dans notre HTML.</p>
+    <p>A l'aide de la balise <code>&lt;script&gt;&lt;/script&gt;</code>.</p>
+    <p>Deux méthode d'utilisation :
+        <ol>
+            <li>Introduire le code entre la paire de balise :<br>
+                <code>
+                    &lt;script type="text/javascript"&gt;<br>
+                        alert('Bienvenu dans la première démonstration du javascript!');<br>
+                    &lt;/script&gt;
+                </code>
+            </li>
+            <li>Lier un fichier .js avec l'HTML grâce à l'attribut src de la balise :<br>
+                <code>
+                    &lt;script type="text/javascript" src="./fichier.js"&gt;&lt;/script&gt;
+                </code><br>
+                Cette dernière méthode est prioritaire.
+            </li>
+        </ol>
+    </p>
+    <p>Nous avons aussi vu l'utilisation de la balise <code>&lt;noscript&gt;&lt;/noscript&gt;</code> qui n'est générée que quand les fonctions javascript du navigateur ne sont pas détecté.</p>
     <script type="text/javascript">
         alert('Bienvenu dans la première démonstration du javascript!');
     </script>
