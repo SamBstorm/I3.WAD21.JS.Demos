@@ -4,9 +4,18 @@ function AddNewElement(listId, nameItem = 'New Item') {
     if (listElement.nodeName != "UL") throw new TypeError(`L'objet avec l'id ${listId} n'est pas une liste...`);
 
     let new_liElement = document.createElement('li');
-    listElement.appendChild(new_liElement);
     new_liElement.innerText = nameItem;
+    let btn_li = document.createElement('input');
+    btn_li.setAttribute('type','button');
+    btn_li.setAttribute('value','🤚');
+    btn_li.setAttribute('onclick','toggleList(this.parentNode)');
+    new_liElement.appendChild(btn_li);
+    listElement.appendChild(new_liElement);
     changeTitle();
+}
+
+function toggleList(li_to_switch) {
+    document.getElementById('ul_2').appendChild(li_to_switch);
 }
 
 let student_names = ['Judy', 'Valérie', 'Anaïs', 'Assmaa', 'Laure', 'Caroline', 'Marwa', 'Julie', 'Ylenia', 'Grace', 'Minh', 'Stefania', 'Nicole', 'Jennifer', 'Myriam'];
