@@ -16,6 +16,7 @@ function AddNewElement(listId, nameItem = 'New Item') {
 
 function toggleList(li_to_switch) {
     document.getElementById('ul_2').appendChild(li_to_switch);
+    li_to_switch.getElementsByTagName('input')[0].setAttribute('onclick','goUpItem(this.parentNode)');
 }
 
 let student_names = ['Judy', 'Valérie', 'Anaïs', 'Assmaa', 'Laure', 'Caroline', 'Marwa', 'Julie', 'Ylenia', 'Grace', 'Minh', 'Stefania', 'Nicole', 'Jennifer', 'Myriam'];
@@ -29,3 +30,8 @@ function changeTitle() {
     title.innerText = 'Liste 1 : ' + document.getElementById('ul_1').childNodes.length;
 }
 changeTitle();
+
+function goUpItem(item){
+    let previousItem = item.previousElementSibling;
+    if(previousItem) previousItem.parentNode.insertBefore(item, previousItem);
+}
